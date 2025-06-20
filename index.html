@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HAMZA - Premium Personal Website | Chess Enthusiast & Creative Professional">
+    <meta name="keywords" content="HAMZA, personal website, chess, portfolio, premium design">
+    <meta name="author" content="HAMZA">
+    <title>Hamza</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="./images/favicon.webp">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./css/main.css" as="style">
+    <link rel="preload" href="./images/hero-bg-premium.jpg" as="image">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader removed for better performance -->
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor">
+        <i class="fas fa-chess-bishop"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./images/chess-knight-logo.webp" alt="Chess Knight" class="logo-icon">
+                <span class="logo-text">HAMZA</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#social" class="nav-link" data-section="social">Social</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link" data-section="blog">Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link" data-section="gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-name">
+                    <span class="letter">H</span>
+                    <span class="letter">A</span>
+                    <span class="letter">M</span>
+                    <span class="letter">Z</span>
+                    <span class="letter">A</span>
+                </h1>
+                <p class="hero-tagline">Web Developer • Chess Master • Calisthenics Athlete
+
+</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Discover More</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-chess-piece">
+                <img src="./images/hero-icon.png" alt="Chess Knight" class="floating-knight">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Silence is the soul of true greatness</p>
+            </div>
+            <div class="about-content">
+                <div class="about-intro">
+                    <img src="./images/oboutme.jpg" alt="Hamza's Profile Picture" class="about-image">
+                    <p class="about-description">Hello! I'm Hamza Ben Salem, a  web developer, chess master, and calisthenics athlete. My journey is defined by a relentless pursuit of excellence, whether I'm crafting elegant code, cooking on the chessboard, or pushing my physical limits. I believe in continuous learning and applying strategic thinking to every challenge, transforming complex problems into innovative solutions. Welcome to my world, where logic meets creativity and dedication fuels growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Social Links Section -->
+    <section id="social" class="social">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Connect With Me</h2>
+                <p class="section-subtitle">I hate social media!</p>
+            </div>
+            
+            <!-- Compact Premium Social Links -->
+            <div class="compact-social-container">
+                <div class="social-links-row">
+                    <!-- LinkedIn -->
+                    <a href="#" class="social-link linkedin" target="_blank" rel="noopener noreferrer" data-tooltip="LinkedIn">
+                        <div class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="social-glow"></div>
+                    </a>
+
+                    <!-- X/Twitter -->
+                    <a href="https://x.com/topgiiii" class="social-link twitter" target="_blank" rel="noopener noreferrer" data-tooltip="X (Twitter)">
+                        <div class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="social-glow"></div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/imkhamzat/" class="social-link instagram" target="_blank" rel="noopener noreferrer" data-tooltip="Instagram">
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="social-glow"></div>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/imkhamzat" class="social-link facebook" target="_blank" rel="noopener noreferrer" data-tooltip="Facebook">
+                        <div class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="social-glow"></div>
+                    </a>
+
+                    <!-- Chess.com -->
+                    <a href="https://www.chess.com/member/imkhamzat" class="social-link chess-com" target="_blank" rel="noopener noreferrer" data-tooltip="Chess.com">
+                        <div class="social-icon">
+                            <i class="fas fa-chess-knight"></i>
+                        </div>
+                        <div class="social-glow"></div>
+                    </a>
+
+                    <!-- Lichess -->
+                    <a href="https://lichess.org/@/homaz" class="social-link lichess" target="_blank" rel="noopener noreferrer" data-tooltip="Lichess">
+                        <div class="social-icon">
+                            <i class="fas fa-chess-knight"></i>
+                        </div>
+                        <div class="social-glow"></div>
+                    </a>
+
+                    <!-- Spotify -->
+                    <a href="#" class="social-link spotify" target="_blank" rel="noopener noreferrer" data-tooltip="Spotify">
+                        <div class="social-icon">
+                            <i class="fab fa-spotify"></i>
+                        </div>
+                        <div class="social-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog/Ideas Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ideas & Thoughts</h2>
+                <p class="section-subtitle">Latest Posts</p>
+            </div>
+            <div class="blog-content">
+
+                <!-- Quote Cards - Easy to edit -->
+
+                <div class="quote-card" data-aos="fade-up">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote>
+                    "The darker the night, the brighter the stars, 
+                    The deeper the grief, the closer is God!."
+                    </blockquote>
+                    <cite>- Fyodor Dostoevsky</cite>
+                </div>
+                
+                <!-- Blog Posts - Easy to add more -->
+<div class="quote-card" data-aos="fade-up">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote>
+                        "My unmatched perspicacity, coupled with sheer indefatigability, makes me a feared opponent in any realm of human endeavor."
+                    </blockquote>
+                    <cite>- Emory Andrew Tate Jr</cite>
+                </div>
+                
+                <!-- Blog Posts - Easy to add more -->
+
+                
+                    
+                    <!-- Add more blog posts here by copying the article structure -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Gallery</h2>
+                <p class="section-subtitle">Moments and inspirations</p>
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="chess">Random</button>
+                <button class="filter-btn" data-filter="lifestyle">Thoughts</button>
+            </div>
+            <div class="gallery-grid">
+                <!-- Gallery items - Easy to add more by copying this structure -->
+                <div class="gallery-item" data-category="Thoughts">
+                    <img src="./images/image0.jpg" alt="Chess Strategy" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>The darker the night, the brighter the stars, the deeper the grief, the closer is god</h4>
+                            <p>HAMZA BEN SALEM</p>
+                        </div>
+                        <button class="gallery-zoom" data-image="./images/image0.jpg">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="Thoughts">
+                    <img src="./images/image1.jpg" alt="Design Work" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>GM</h4>
+                            <p>HAMZA BEN SALEM</p>
+                        </div>
+                        <button class="gallery-zoom" data-image="./images/image1.jpg">
+                            <i class="fas fa-expand"></i>
+                        </button>
+
+                         </div>
+                </div>
+                <div class="gallery-item" data-category="Random">
+                    <img src="./images/meme1.jpg" alt="Design Work" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Real</h4>
+                            <p>HAMZA BEN SALEM</p>
+                        </div>
+                        <button class="gallery-zoom" data-image="./images/meme1.jpg">
+                            <i class="fas fa-expand"></i>
+                        </button>
+
+
+                         </div>
+                </div>
+                <div class="gallery-item" data-category="Thoughts">
+                    <img src="./images/greatpost.jpg" alt="Design Work" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>indeed</h4>
+                            <p>HAMZA BEN SALEM</p>
+                        </div>
+                        <button class="gallery-zoom" data-image="./images/greatpost.jpg">
+                            <i class="fas fa-expand"></i>
+                        </button>
+
+
+
+                
+                <!-- Add more gallery items here by copying the gallery-item structure -->
+                <!-- Remember to update data-category and image sources -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Feel Free To Connect</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>gghamzehgg@gmail.com</p>
+                            <button class="copy-email" data-email="gghamzehgg@gmail.com">
+                                <i class="fas fa-copy"></i> Copy Email
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>Quick messages</p>
+                            <a href="https://wa.me/+21655474680" class="whatsapp-link" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./images/chess-knight.jpg" alt="Chess Knight" class="logo-icon">
+                    <span class="logo-text">HAMZA</span>
+                </div>
+                <p class="footer-text">Made By Hamza</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/topgiiii" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/imkhamzat/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/imkhamzat/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HAMZA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="" id="lightbox-image">
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/animations.js" defer></script>
+    <script src="./js/utils.js" defer></script>
+</body>
+</html>
+

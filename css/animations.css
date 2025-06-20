@@ -1,0 +1,107 @@
+/* ===================================
+   ANIMATIONS - HAMZA WEBSITE
+   CSS Animations and Keyframes
+   =================================== */
+
+/* Reduced Motion Overrides */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .parallax-element {
+        transform: none !important;
+    }
+    
+    .hero-background {
+        background-attachment: scroll !important;
+    }
+    
+    .particle {
+        display: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --text-primary: #FFFFFF;
+        --text-secondary: #CCCCCC;
+        --accent-gold: #FFFF00;
+        --border-color: #FFFFFF;
+    }
+}
+
+
+
+/* Hover animations and interactive effects - KEEP THESE */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-gold);
+    color: var(--primary-bg);
+    transform: translateY(-2px);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-gold);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-gold);
+    transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+}
+
+.premium-social-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.premium-social-card:hover .card-background {
+    border-color: var(--accent-gold);
+    background: rgba(33, 38, 45, 0.95);
+}
+
+.premium-social-card:hover .social-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.premium-social-card:hover .connect-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.premium-social-card:hover .card-glow {
+    opacity: 1;
+}
+
+.premium-social-card:hover .social-details h4 {
+    color: var(--accent-gold);
+}
+
+/* Custom cursor hover effects */
+.custom-cursor:hover {
+    transform: scale(1.5);
+    background: rgba(255, 215, 0, 0.8);
+}
+

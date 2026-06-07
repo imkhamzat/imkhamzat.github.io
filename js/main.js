@@ -287,7 +287,7 @@ function initContactForm() {
                 }
             } catch (error) {
                 console.error('Contact form error:', error);
-                showNotification('Network error. Please check your connection and try again.', 'error');
+                showNotification('Coming soon...Please send your message via email', 'error');
             } finally {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;

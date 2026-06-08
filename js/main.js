@@ -216,85 +216,57 @@ function initScrollEffects() {
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     const copyEmailBtn = document.querySelector('.copy-email');
-    
-    // Backend API URL
-    const API_BASE_URL = 'https://5000-idqfi8xhopy6we033uoto-a7e414d6.manusvm.computer/api';
-    
-    // Handle form submission
+
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+
             const formData = new FormData(this);
             const name = formData.get('name');
             const email = formData.get('email');
             const message = formData.get('message');
-            
-            // Basic validation
-            if (!name || !email || !message) {
-                showNotification('Please fill in all fields', 'error');
-                return;
-            }
-            
-            // Additional client-side validation
-            if (name.length < 2) {
+
+            // Validation
+            if (!name || name.length < 2) {
                 showNotification('Name must be at least 2 characters long', 'error');
                 return;
             }
-            
             if (!isValidEmail(email)) {
                 showNotification('Please enter a valid email address', 'error');
                 return;
             }
-            
-            if (message.length < 10) {
+            if (!message || message.length < 10) {
                 showNotification('Message must be at least 10 characters long', 'error');
                 return;
             }
-            
+
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
-            
+
             try {
-                // Send data to backend
-                const response = await fetch(`${API_BASE_URL}/contact`, {
+                const response = await fetch('https://formspree.io/f/xkoabwbr', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        message: message
-                    })
+                    headers: { 'Accept': 'application/json' },
+                    body: formData
                 });
-                
-                const result = await response.json();
-                
-                if (response.ok && result.success) {
-                    showNotification(result.message || 'Message sent successfully!', 'success');
+
+                if (response.ok) {
+                    showNotification('Message sent successfully!', 'success');
                     contactForm.reset();
                 } else {
-                    // Handle validation errors from backend
-                    if (result.errors && Array.isArray(result.errors)) {
-                        showNotification(result.errors.join(', '), 'error');
-                    } else {
-                        showNotification(result.message || 'Failed to send message. Please try again.', 'error');
-                    }
+                    showNotification('Failed to send. Please try WhatsApp or Email.', 'error');
                 }
             } catch (error) {
-                console.error('Contact form error:', error);
-                showNotification('Please contact me using Whatsapp or Email', 'error');
+                showNotification('Failed to send. Please try WhatsApp or Email.', 'error');
             } finally {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             }
         });
     }
-    
+}
     // Copy email functionality
     if (copyEmailBtn) {
         copyEmailBtn.addEventListener('click', function() {

@@ -213,6 +213,7 @@ function initScrollEffects() {
 }
 
 // Contact form functionality
+// Contact form functionality
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     const copyEmailBtn = document.querySelector('.copy-email');
@@ -220,13 +221,11 @@ function initContactForm() {
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-
             const formData = new FormData(this);
             const name = formData.get('name');
             const email = formData.get('email');
             const message = formData.get('message');
 
-            // Validation
             if (!name || name.length < 2) {
                 showNotification('Name must be at least 2 characters long', 'error');
                 return;
@@ -251,7 +250,6 @@ function initContactForm() {
                     headers: { 'Accept': 'application/json' },
                     body: formData
                 });
-
                 if (response.ok) {
                     showNotification('Message sent successfully!', 'success');
                     contactForm.reset();
@@ -266,12 +264,11 @@ function initContactForm() {
             }
         });
     }
-}
+
     // Copy email functionality
     if (copyEmailBtn) {
         copyEmailBtn.addEventListener('click', function() {
             const email = this.getAttribute('data-email');
-            
             navigator.clipboard.writeText(email).then(() => {
                 showNotification('Email copied to clipboard', 'success');
             }).catch(() => {

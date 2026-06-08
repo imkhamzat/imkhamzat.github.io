@@ -287,7 +287,7 @@ function initContactForm() {
                 }
             } catch (error) {
                 console.error('Contact form error:', error);
-                showNotification('Coming soon...Please send your message via email', 'error');
+                showNotification('Please contact me using Whatsapp or Email', 'error');
             } finally {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
@@ -301,7 +301,7 @@ function initContactForm() {
             const email = this.getAttribute('data-email');
             
             navigator.clipboard.writeText(email).then(() => {
-                showNotification('Email copied to clipboard!', 'success');
+                showNotification('Email copied to clipboard', 'success');
             }).catch(() => {
                 showNotification('Failed to copy email', 'error');
             });

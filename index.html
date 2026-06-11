@@ -196,15 +196,48 @@
         </div>
     </section>
     <!-- Blog/Ideas Section -->
-    <div class="video-container">
-  <iframe 
-    src="https://donis.jimpenopisonline.online/premiumtv/daddy4.php?id=966" 
-    width="100%" 
-    height="480" 
-    frameborder="0" 
-    allowfullscreen>
-  </iframe>
-</div>
+    <!DOCTYPE html>
+<html lang="in">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Stream Player</title>
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  
+  <style>
+    /* This centers the player and caps its maximum width */
+    .player-wrapper {
+      max-width: 800px;   /* Sets the absolute largest width you want the video to be */
+      width: 100%;        /* Allows it to shrink automatically on smaller mobile screens */
+      margin: 20px auto;  /* Centers the video player horizontally on your page */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Adds a nice, clean drop shadow drop */
+      border-radius: 8px; /* Smooths out the sharp corners */
+      overflow: hidden;   /* Keeps the player corners rounded */
+    }
+
+    /* This forces the VideoJS element to fit perfectly inside our wrapper */
+    .video-js {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9; /* Maintains standard widescreen proportions so it never stretches distortionally */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player-wrapper">
+    <video
+      id="my-live-stream"
+      class="video-js vjs-default-skin vjs-big-play-centered"
+      controls
+      preload="auto"
+      data-setup='{}'>
+      <source src="https://fomis.phantemlis.top/premium966/index.m3u8?md5v1=fZFmwdMsAcXB4dGaJVHM0Q&md5v2=2xyohbkjeHWFqMWbTc7NGQ&expires=1781202806" type="application/x-mpegURL">
+    </video>
+  </div>
+
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+</body>
+</html>
     <!-- ------------------------------------- -->
     <section id="blog" class="blog">
         <div class="container">

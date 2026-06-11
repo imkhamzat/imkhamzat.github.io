@@ -200,38 +200,41 @@
 <html lang="in">
 <head>
   <meta charset="UTF-8">
-  <title>Live Stream Player</title>
+  <title>Sleek Live Stream Player</title>
+  <!-- Core VideoJS CSS -->
   <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  <!-- Modern 'Fantasy' Theme for a polished look -->
+  <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet" />
   
   <style>
-    /* This centers the player and caps its maximum width */
     .player-wrapper {
-      max-width: 800px;   /* Sets the absolute largest width you want the video to be */
-      width: 100%;        /* Allows it to shrink automatically on smaller mobile screens */
-      margin: 20px auto;  /* Centers the video player horizontally on your page */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Adds a nice, clean drop shadow drop */
-      border-radius: 8px; /* Smooths out the sharp corners */
-      overflow: hidden;   /* Keeps the player corners rounded */
+      max-width: 800px;
+      width: 100%;
+      margin: 40px auto; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Deeper, sleeker shadow */
+      border-radius: 12px; /* Rounder, modern corners */
+      overflow: hidden;
+      background-color: #000;
     }
 
-    /* This forces the VideoJS element to fit perfectly inside our wrapper */
     .video-js {
       width: 100% !important;
       height: auto !important;
-      aspect-ratio: 16 / 9; /* Maintains standard widescreen proportions so it never stretches distortionally */
+      aspect-ratio: 16 / 9;
     }
   </style>
 </head>
 <body>
 
   <div class="player-wrapper">
+    <!-- Notice the 'vjs-theme-fantasy' class added below! -->
     <video
       id="my-live-stream"
-      class="video-js vjs-default-skin vjs-big-play-centered"
+      class="video-js vjs-theme-fantasy vjs-big-play-centered"
       controls
       preload="auto"
       data-setup='{}'>
-      <source src="https://fomis.phantemlis.top/premium966/index.m3u8?md5v1=fZFmwdMsAcXB4dGaJVHM0Q&md5v2=2xyohbkjeHWFqMWbTc7NGQ&expires=1781202806" type="application/x-mpegURL">
+      <source src="https://fomis.phantemlis.top/premium966/index.m3u8?md5v1=T9URJEiEUlR65tWOK-y7TA&md5v2=kMQVYTEyC0UUPiZK-cyEjA&expires=1781207113" type="application/x-mpegURL">
     </video>
   </div>
 

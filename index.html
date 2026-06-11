@@ -196,56 +196,50 @@
         </div>
     </section>
 
-    
-                    
                     <!-- Add more blog posts here by copying the article structure -->
-                </div>
-            </div>
-        </div>
-    </section>
+         <!DOCTYPE html>
+<html lang="in">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Stream Player</title>
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  
+  <style>
+    /* This centers the player and caps its maximum width */
+    .player-wrapper {
+      max-width: 800px;   /* Sets the absolute largest width you want the video to be */
+      width: 100%;        /* Allows it to shrink automatically on smaller mobile screens */
+      margin: 20px auto;  /* Centers the video player horizontally on your page */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Adds a nice, clean drop shadow drop */
+      border-radius: 8px; /* Smooths out the sharp corners */
+      overflow: hidden;   /* Keeps the player corners rounded */
+    }
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Gallery</h2>
-                <p class="section-subtitle"></p>
-            </div>
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">Latest</button>
- <!--                <button class="filter-btn" data-filter="chess">Work</button>
-                <button class="filter-btn" data-filter="lifestyle">More</button> -->
-<!-- press ctrl / to renable the code -->
-            </div>
-            <div class="gallery-grid">
+    /* This forces the VideoJS element to fit perfectly inside our wrapper */
+    .video-js {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9; /* Maintains standard widescreen proportions so it never stretches distortionally */
+    }
+  </style>
+</head>
+<body>
 
+  <div class="player-wrapper">
+    <video
+      id="my-live-stream"
+      class="video-js vjs-default-skin vjs-big-play-centered"
+      controls
+      preload="auto"
+      data-setup='{}'>
+      <!-- Fresh active token swapped here -->
+      <source src="https://fomis.phantemlis.top/premium966/index.m3u8?md5v1=T9URJEiEUlR65tWOK-y7TA&md5v2=kMQVYTEyC0UUPiZK-cyEjA&expires=1781207113" type="application/x-mpegURL">
+    </video>
+  </div>
 
-                <!-- Gallery items - Easy to add more by copying this structure -->
-                <div class="gallery-item" data-category="Thoughts">
-                    <img src="./images\Gallery\pic2.webp" alt="Chess Strategy" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div class="gallery-content">
-                            <h4></h4>
-                            <p>Hamza Ben Salem</p>
-                        </div>
-                        <button class="gallery-zoom" data-image="./images\Gallery\pic2.webp">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                </div>
-<
-                <div class="gallery-item" data-category="Thoughts">
-                    <img src="./images\Gallery\pic1.webp" alt="Chess Strategy" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div class="gallery-content">
-                            <h4></h4>
-                            <p>Hamza Ben Salem</p>
-                        </div>
-                        <button class="gallery-zoom" data-image="./images\Gallery\pic1.webp">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                </div>
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+</body>
+</html>
     
  
     <!-- Contact Section -->

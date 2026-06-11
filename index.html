@@ -195,57 +195,7 @@
             </div>
         </div>
     </section>
-   
 
-                <div class="quote-card" data-aos="fade-up">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <blockquote>
-                    "Everything you've ever wanted is sitting on the other side of fear."
-                    </blockquote>
-                    <cite>- George Addair</cite>
-                </div>
-                
-                <!-- Blog Posts - Easy to add more -->
-
-                
-                    
-                    <!-- Add more blog posts here by copying the article structure -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Gallery</h2>
-                <p class="section-subtitle"></p>
-            </div>
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">Latest</button>
- <!--                <button class="filter-btn" data-filter="chess">Work</button>
-                <button class="filter-btn" data-filter="lifestyle">More</button> -->
-<!-- press ctrl / to renable the code -->
-            </div>
-            <div class="gallery-grid">
-
-
-                <!-- Gallery items - Easy to add more by copying this structure -->
-                <div class="gallery-item" data-category="Thoughts">
-                    <img src="./images\Gallery\pic2.webp" alt="Chess Strategy" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div class="gallery-content">
-                            <h4></h4>
-                            <p>Hamza Ben Salem</p>
-                        </div>
-                        <button class="gallery-zoom" data-image="./images\Gallery\pic2.webp">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                </div>
 <!-- ------------------------------- -->
                 <div class="gallery-item" data-category="Thoughts">
                     <img src="./images\Gallery\pic1.webp" alt="Chess Strategy" loading="lazy">
@@ -261,7 +211,83 @@
                 </div>
     
                 <!-- Add more gallery items here by copying the gallery-item structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pro Live Stream Player</title>
+  
+  <!-- VideoJS CSS -->
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.min.css" rel="stylesheet" />
+  <!-- Fantasy Theme -->
+  <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet" />
+  
+  <style>
+    body { background: #111; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+    .player-wrapper {
+      max-width: 800px;
+      width: 95%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .video-js {
+      width: 100% !important;
+      aspect-ratio: 16 / 9;
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
 
+  <div class="player-wrapper">
+    <video
+      id="my-live-stream"
+      class="video-js vjs-theme-fantasy vjs-big-play-centered"
+      controls
+      preload="auto">
+      <source src="https://fomis.phantemlis.top/premium966/index.m3u8?md5v1=T9URJEiEUlR65tWOK-y7TA&md5v2=kMQVYTEyC0UUPiZK-cyEjA&expires=1781207113" type="application/x-mpegURL">
+    </video>
+  </div>
+
+  <!-- VideoJS Core -->
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+  
+  <!-- Plugins for Quality Selection -->
+  <script src="https://unpkg.com/@videojs/contrib-quality-levels@2.1.0/dist/videojs-contrib-quality-levels.min.js"></script>
+  <script src="https://unpkg.com/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
+
+  <script>
+    // Initialize the player
+    var player = videojs('my-live-stream', {
+      autoplay: 'muted', // Required for "Instant Play" in Chrome/Safari
+      liveui: true,      // Optimized UI for live streams
+      fluid: true,
+      html5: {
+        hls: {
+          overrideNative: true, // Force VideoJS engine for better cross-browser compatibility
+          enableLowInitialPlaylist: true,
+          smoothQualityChange: true
+        }
+      }
+    });
+
+    // Add Quality Selector Plugin
+    player.hlsQualitySelector({
+      displayCurrentQuality: true
+    });
+
+    // Stability: Auto-recover if stream crashes
+    player.on('error', function() {
+      console.error("Stream crashed, attempting reload...");
+      setTimeout(() => {
+        player.load();
+        player.play();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
 
                 <!-- Remember to update data-category and image sources -->
             </div>
